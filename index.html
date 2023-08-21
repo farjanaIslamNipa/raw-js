@@ -11,11 +11,15 @@
 
 <script>
   // Write a function that takes a string (a) as argument. Extract the first half a. Return the result
-function myFunction(...arrays) {
-  
-  return arrays.flat();
+function myFunction(a, b) {
+
+  return {[a]: b}
+  // return ((b in a) && ((a[b] !== null) && (a[b] !== undefined)) ? true : false)
 }
-console.log(myFunction([1, 2, 3], [4, 5, 6], [8, 9, 10]));
+// function myFunction(a, b) {
+//   return [new Set([...a, ...b])].sort((x, y) => x - y);
+// }
+console.log(myFunction('x','b'));
 
 
 </script>
