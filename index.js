@@ -1,4 +1,4 @@
-function myFunction(a, b) {
+function getCommon(a, b) {
     let arr1 = a.sort((a, b) => (a - b));                    
     let arr2 = b.sort((a, b) => (a - b));
 
@@ -28,4 +28,14 @@ function myFunction(a, b) {
     }
   
 
-  console.log(myFunction([1, 9, 3, 5], [ 6, 2, 3, 4, 7, 9]));
+//   console.log(getCommon([1, 9, 3, 5], [ 6, 2, 3, 4, 7, 9]));
+
+  function myFunction(obj) {
+      if(obj?.a?.b){
+        return obj.a.b
+      }else{
+        return 'nope'
+      }
+    }
+  
+  console.log(myFunction({j:9,i:2,x:3,z:4}));
