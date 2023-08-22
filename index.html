@@ -10,17 +10,46 @@
 </body>
 
 <script>
-  // Write a function that takes a string (a) as argument. Extract the first half a. Return the result
-function myFunction(a, b) {
 
-  return {[a]: b}
-  // return ((b in a) && ((a[b] !== null) && (a[b] !== undefined)) ? true : false)
-}
 // function myFunction(a, b) {
-//   return [new Set([...a, ...b])].sort((x, y) => x - y);
-// }
-console.log(myFunction('x','b'));
+//   var result = {};
+//   a.forEach((key, i) => result[key] = b[i]);
+//     return result
+    
+//   }
 
+// console.log(myFunction(['a','b','c'],[1,2,3]));
+
+function myFunction(a, b) {
+  let arr1 = a.sort((a, b => (a - b)));                    
+  let arr2 = b.sort((a, b => (a - b)));
+
+  var common = [];                  
+  var i = 0, j = 0;    
+
+  while(i<arr1.length && j<arr2.length) {
+    
+    if(arr1[i] == arr2[j]) {        
+      common.push(arr1[i]);
+      i++;
+      j++;
+      console.log('common');
+    }
+    else if(arr1[i] < arr2[j]) {  
+      i++; 
+      console.log('arr1');                       
+    }                             
+    else {
+      j++;
+      console.log('arr2');    
+    }
+  }
+  
+  return common;
+    
+  }
+
+console.log(myFunction([9, 5, 3, 4, 11], [1, 2, 3, 5, 7, 8]));
 
 </script>
 </html>
