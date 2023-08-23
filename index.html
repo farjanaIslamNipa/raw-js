@@ -21,6 +21,11 @@
 // console.log(myFunction(['a','b','c'],[1,2,3]));
 
 
+function myFunction(obj) {
+      return Object.values(obj).reduce((a, b) => a + b)
+    }
+  
+  console.log(myFunction({ e: 6, f: 4, b: 5, a: 3 }));
 
 </script>
 </html>
