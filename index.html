@@ -21,15 +21,22 @@
 // console.log(myFunction(['a','b','c'],[1,2,3]));
 
 
-function myFunction(a, b) {
-  let obj = Object.values(a).forEach((val) => console.log(val * b))
-  console.log(obj, 'obj');
-  return (a);
+// function myFunction(a, b) {
+//   const newObj = Object.fromEntries(
+//     Object.entries(a).map(([name, value]) => [name, value * b])
+// );
+//   return newObj;
+// }
+function myFunction(obj) {
+  //  return Object.entries(obj).reduce((acc, [key, val]) => {
+  //  	return { ...acc, [val]: key };
+  //  }, {});
 
-  // console.log(y['b'], 'y');
+   return Object.entries(obj).reduce((acc, [key, val]) => {
+    return {...acc, [val] : key };
+   })
 }
-  
-  console.log(myFunction({a:1,b:2,c:3},3));
+  console.log(myFunction({a:1,b:2,c:3}));
 
 </script>
 </html>
