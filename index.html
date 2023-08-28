@@ -28,13 +28,8 @@
 //   return newObj;
 // }
 function myFunction(obj) {
-  //  return Object.entries(obj).reduce((acc, [key, val]) => {
-  //  	return { ...acc, [val]: key };
-  //  }, {});
 
-   return Object.entries(obj).reduce((acc, [key, val]) => {
-    return {...acc, [val] : key };
-   })
+  return   typeof(obj) === Object ? true : false
 }
   console.log(myFunction({a:1,b:2,c:3}));
 

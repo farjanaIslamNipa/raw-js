@@ -28,13 +28,17 @@ function getCommon(a, b) {
     }
   
 
-//   console.log(getCommon([1, 9, 3, 5], [ 6, 2, 3, 4, 7, 9]));
+  //  const makePairs = (object) => Object.keys(object).map((el) => [el, object[el]]);
 
-  function myFunction(obj) {
-      obj.forEach((key, i) => {
-        console.log(key, i);
-      })
-      return 'a'
-    }
-  
-  console.log(myFunction({j:9,i:2,x:3,z:4}));
+  //  const makePairs =(object) => Object.keys(object).map(el => [el, object[el]])
+
+  //  console.log(makePairs({ a: 1, b: 2 }));
+
+  const myFunc = (obj) => {
+    const objectKeys = Object.keys(obj);
+    if(objectKeys.length === 0) return true;
+
+    return !objectKeys.filter((key) => obj[key] || obj[key] === 0 || obj[key] === false).length;
+     
+  }
+  console.log(myFunc({ a: undefined}));
