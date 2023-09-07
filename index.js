@@ -2,6 +2,8 @@
 //     let arr1 = a.sort((a, b) => (a - b));                    
 //     let arr2 = b.sort((a, b) => (a - b));
 
+const { boolean } = require("yargs");
+
 //     let common = [];                  
 //     let i = 0, j = 0;    
   
@@ -29,24 +31,24 @@
   // ----------------------------------------------
 
   // 
-  var expect = function(val) {
-    return {
-      toBe: (val2) => {
-        if(val2 !== val) throw new Error('Not Equal')
-        else return true;
-      },
-      notToBe: (val2) => {
-        if(val === val2) throw new Error('Equal')
-        else return true;
-      }
-    }
- };
+// function myFunc(obj, ...args){
+//   const newObject = { ...obj };
 
- console.log(expect(5).toBe(null));
- 
- /**
-  * expect(5).toBe(5); // true
-  * expect(5).notToBe(5); // throws "Equal"
-  */
+//   args.forEach((arg) => {
+//     delete newObject[arg];
+//   });
 
+//   return newObject;
+// }
+// console.log(myFunc({ a: 1, b: 2 }, 'b'));
+
+function myFunction(obj) {
+  delete obj['b']
+  return obj;
+}
+function myFunction(obj) {
+  const {b, ...rest} = obj
+  return rest;
+}
+console.log(myFunction({b:9,a:2,c:3,d:4}));
 
