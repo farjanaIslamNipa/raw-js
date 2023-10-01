@@ -1,37 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
-  testing
+  <div class="wpb_wrapper">
+    <div id="softlab_services_64f9f1527f14e" class="softlab_module_services_3">
+      <div class="services_wrapper">
+        <div class="services_icon_wrapper">
+          <div class="services_circle_wrapper">
+            <div class="services_circle" style="background-color: #ca5cbc"></div>
+          </div>
+          <div class="services_circle_wrapper">
+            <div class="services_circle" style="background-color: #664bc4"></div>
+          </div><i class="services_icon flaticon-bitcoin-11"></i>
+        </div>
+        <div class="services_content">
+          <h3 class="services_title">Any Payments</h3>
+          <div class="services_content">Accept Crypto payments from your online customers on your smartphone.</div>
+        </div><a class="services_button button-read-more" href="#">Read More</a>
+      </div>
+    </div>
+  </div>
 </body>
 
 <script>
 
-// function myFunction(a, b) {
-//   var result = {};
-//   a.forEach((key, i) => result[key] = b[i]);
-//     return result
-    
-//   }
+  // function myFunction(a, b) {
+  //   var result = {};
+  //   a.forEach((key, i) => result[key] = b[i]);
+  //     return result
 
-// console.log(myFunction(['a','b','c'],[1,2,3]));
+  //   }
+
+  // console.log(myFunction(['a','b','c'],[1,2,3]));
 
 
-// function myFunction(a, b) {
-//   const newObj = Object.fromEntries(
-//     Object.entries(a).map(([name, value]) => [name, value * b])
-// );
-//   return newObj;
-// }
-function myFunction(obj) {
+  // function myFunction(a, b) {
+  //   const newObj = Object.fromEntries(
+  //     Object.entries(a).map(([name, value]) => [name, value * b])
+  // );
+  //   return newObj;
+  // }
 
-  return   typeof(obj) === Object ? true : false
+let getCapital = add(10);
+console.log(getCapital);
+
+let getDisc1 = getCapital(500);
+let getDisc2 = getCapital(800);
+let getDisc3 = getCapital(900);
+
+function add(disc){
+  console.log(s, 's');
+  var s = 5;
+  return (capital) => {
+    return (capital * disc / 100) + s;
+  };
 }
-  console.log(myFunction(['I', 'need', 'candy']));
 
+let z;
+var p = 10;
+
+let doSum = (b) => {
+  console.log(a, 'a');
+  let a = 10;
+  return a + b;
+}
+console.log(doSum(20), 'do sum');
+var x;
+let y;
+
+console.log(z, 'z');
+console.log(p, 'p');
+console.log(x, 'x');
+console.log(y, 'y');
+console.log(getDisc1, getDisc2, getDisc3);
 </script>
+
 </html>

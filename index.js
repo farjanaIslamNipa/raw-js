@@ -42,13 +42,8 @@ const { boolean } = require("yargs");
 // }
 // console.log(myFunc({ a: 1, b: 2 }, 'b'));
 
-function myFunction(obj) {
-  delete obj['b']
-  return obj;
+function myFunction(a, b) {
+  return a.getTime() === b.getTime()
 }
-function myFunction(obj) {
-  const {b, ...rest} = obj
-  return rest;
-}
-console.log(myFunction({b:9,a:2,c:3,d:4}));
+console.log(myFunction(new Date('2000/01/01 08:00:00'), new Date('2000/01/01 08:45:00')));
 
