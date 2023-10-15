@@ -44,13 +44,7 @@ const { boolean } = require("yargs");
 
 
 function regexVar(s) {
-  // console.log(typeof s);
-  if (typeof s === 'string'){
-    return s.split("").reverse().join("");
-  }else{
-    
-  }
-  
+  return s.split("").reverse().join("")
 }
 console.log(regexVar("hello"));
 
