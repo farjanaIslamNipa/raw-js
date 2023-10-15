@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #btn{
+      height: 48px;
+      width: 96px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <button id="btn">0</button>
+
+  <script>
+    let btn = document.getElementById('btn')
+    btn.addEventListener('click', function(){
+      btn.innerHTML++
+      btn.innerHTML = count
+    })
+
+  </script>
+</body>
+</html>

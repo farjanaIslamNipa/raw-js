@@ -43,9 +43,16 @@ const { boolean } = require("yargs");
 // console.log(myFunc({ a: 1, b: 2 }, 'b'));
 
 
-function regexVar(s) {
-  return s.split("").reverse().join("")
+function isPositive(a) {
+    try{
+      if(a <= 0){
+        throw new Error(a === 0 ? 'Zero Error' : 'Negative Error')
+      } 
+      else return 'YES'
+    }catch(e){
+      return e.message
+    }
 }
-console.log(regexVar("hello"));
+console.log(isPositive(5));
 
 
