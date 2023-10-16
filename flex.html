@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .container{
+      max-width: 1440px;
+      margin: 50px auto;
+    }
+    /* with flex */
+    /* .flex-wrapper{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .item{
+      flex-grow: 1;
+      flex-basis: 200;
+      padding: 50px;
+      border-radius: 15px;
+    } */
+
+    /* with grid */
+    .flex-wrapper{
+      display: grid;
+      grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+      gap: 15px;
+    }
+    .item{
+      padding: 50px;
+      border-radius: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="flex-wrapper">
+      <div style="background-color: aqua;" class="item"></div>
+      <div style="background-color: rgb(122, 55, 35);" class="item"></div>
+      <div style="background-color: rgb(47, 17, 87);" class="item"></div>
+      <div style="background-color: rgb(64, 95, 29);" class="item"></div>
+      <div style="background-color: rgb(62, 7, 94);" class="item"></div>
+      <div style="background-color: rgb(14, 82, 20);" class="item"></div>
+    </div>
+  </div>
+</body>
+</html>
